@@ -25,3 +25,12 @@ there should be a Download ZIP button below it.
 
 ## Commit
 #### Relevant detailed commit message
+##### make change to file
+> 1. git add -A
+> 2. git commit -q -m “some note about your push” (Make sure to use the proper “Quotations Marks”)
+##### go see site on IPAddress (stage) 
+> 3. git push stageServer
+##### go see site on IPAddress (prod)
+> 4. git push prodSever
+##### go see site on IPAddress (Github)
+> 5. git push mddhub
