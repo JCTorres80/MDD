@@ -7,11 +7,15 @@ function emailMe($name, $email, $message){
     'Reply-To: ' . $email . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-	mail($to, $subject, $message, $headers);
+	return mail($to, $subject, $message, $headers);
 }
 
 if(isset($_POST["name"])){
-	emailMe($_POST["name"], $_POST["email"], $_POST["message"]);
+	if(emailMe($_POST["name"], $_POST["email"], $_POST["message"])){
+		header("Location: success.html");
+	} else {
+		header("Location: failure.html");
+	}
 }
 
 header("Location: index.html");
