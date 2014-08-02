@@ -12,12 +12,12 @@ function emailMe($name, $email, $message){
 
 if(isset($_POST["name"])){
 	if(emailMe($_POST["name"], $_POST["email"], $_POST["message"])){
-		header("Location: success.html");
+		//header("Location: success.html");
 	} else {
-		header("Location: failure.html");
+		//header("Location: failure.html");
 	}
 }
 
-//header("Location: index.html");
+header("Location: index.html");
 
 ?>
